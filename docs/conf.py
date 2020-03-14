@@ -53,6 +53,7 @@ html_theme_options = {
     'canonical_url': '',
     'analytics_id': 'UA-XXXXXXX-1',  #  Provided by Google in your dashboard
     'display_version': True,
+    'logo_only': True,
     'prev_next_buttons_location': 'bottom',
     'style_external_links': False,
     # Toc options
@@ -62,6 +63,7 @@ html_theme_options = {
     'includehidden': True,
     'titles_only': False
 }
+html_logo = "serpent_tracker_logo.png"
 
 
 # Add any paths that contain custom static files (such as style sheets) here,
