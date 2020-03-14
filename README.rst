@@ -1,114 +1,99 @@
-serpent_tracker
-===============
+Serpent Tracker
+================
 
 A Snake keeping solution for managing snake records
 
-.. image:: https://img.shields.io/badge/built%20with-Cookiecutter%20Django-ff69b4.svg
-     :target: https://github.com/pydanny/cookiecutter-django/
-     :alt: Built with Cookiecutter Django
-.. image:: https://img.shields.io/badge/code%20style-black-000000.svg
-     :target: https://github.com/ambv/black
-     :alt: Black code style
+![image](https://img.shields.io/badge/built%20with-Cookiecutter%20Django-ff69b4.svg%0A%20%20:target:%20https://github.com/pydanny/cookiecutter-django/%0A%20%20:alt:%20Built%20with%20Cookiecutter%20Django)
 
-.. image:: https://readthedocs.org/projects/serpent-tracker-docs/badge/?version=latest
-    :target: https://serpent-tracker-docs.readthedocs.io/en/latest/?badge=latest
-    :alt: Documentation Status
+![image](https://img.shields.io/badge/code%20style-black-000000.svg%0A%20%20:target:%20https://github.com/ambv/black%0A%20%20:alt:%20Black%20code%20style)
 
+![image](https://readthedocs.org/projects/serpent-tracker-docs/badge/?version=latest%0A%20:target:%20https://serpent-tracker-docs.readthedocs.io/en/latest/?badge=latest%0A%20:alt:%20Documentation%20Status)
 
-:License: MIT
-
+License
+:   MIT
 
 Settings
 --------
 
-Moved to settings_.
-
-.. _settings: https://serpent-tracker-docs.readthedocs.io/en/latest/settings.html
+Moved to
+[settings](https://serpent-tracker-docs.readthedocs.io/en/latest/settings.html).
 
 Basic Commands
 --------------
 
-Setting Up Your Users
-^^^^^^^^^^^^^^^^^^^^^
+### Setting Up Your Users
 
-* To create a **normal user account**, just go to Sign Up and fill out the form. Once you submit it, you'll see a "Verify Your E-mail Address" page. Go to your console to see a simulated email verification message. Copy the link into your browser. Now the user's email should be verified and ready to go.
+-   To create a **normal user account**, just go to Sign Up and fill out
+    the form. Once you submit it, you'll see a "Verify Your E-mail
+    Address" page. Go to your console to see a simulated email
+    verification message. Copy the link into your browser. Now the
+    user's email should be verified and ready to go.
+-   To create an **superuser account**, use this command:
 
-* To create an **superuser account**, use this command::
+        $ python manage.py createsuperuser
 
-    $ python manage.py createsuperuser
+For convenience, you can keep your normal user logged in on Chrome and
+your superuser logged in on Firefox (or similar), so that you can see
+how the site behaves for both kinds of users.
 
-For convenience, you can keep your normal user logged in on Chrome and your superuser logged in on Firefox (or similar), so that you can see how the site behaves for both kinds of users.
-
-Type checks
-^^^^^^^^^^^
+### Type checks
 
 Running type checks with mypy:
 
-::
+    $ mypy serpent_tracker
 
-  $ mypy serpent_tracker
+### Test coverage
 
-Test coverage
-^^^^^^^^^^^^^
-
-To run the tests, check your test coverage, and generate an HTML coverage report::
+To run the tests, check your test coverage, and generate an HTML
+coverage report:
 
     $ coverage run -m pytest
     $ coverage html
     $ open htmlcov/index.html
 
-Running tests with py.test
-~~~~~~~~~~~~~~~~~~~~~~~~~~
+#### Running tests with py.test
 
-::
+    $ pytest
 
-  $ pytest
+### Live reloading and Sass CSS compilation
 
-Live reloading and Sass CSS compilation
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Moved to [Live reloading and SASS
+compilation](https://serpent-tracker-docs.readthedocs.io/en/latest/live-reloading-and-sass-compilation.html).
 
-Moved to `Live reloading and SASS compilation`_.
-
-.. _`Live reloading and SASS compilation`: https://serpent-tracker-docs.readthedocs.io/en/latest/live-reloading-and-sass-compilation.html
-
-
-
-Celery
-^^^^^^
+### Celery
 
 This app comes with Celery.
 
 To run a celery worker:
 
-.. code-block:: bash
+``` {.sourceCode .bash}
+cd serpent_tracker
+celery -A config.celery_app worker -l info
+```
 
-    cd serpent_tracker
-    celery -A config.celery_app worker -l info
+Please note: For Celery's import magic to work, it is important *where*
+the celery commands are run. If you are in the same folder with
+*manage.py*, you should be right.
 
-Please note: For Celery's import magic to work, it is important *where* the celery commands are run. If you are in the same folder with *manage.py*, you should be right.
+### Email Server
 
+In development, it is often nice to be able to see emails that are being
+sent from your application. For that reason local SMTP server
+[MailHog](https://github.com/mailhog/MailHog) with a web interface is
+available as docker container.
 
+Container mailhog will start automatically when you will run all docker
+containers.
 
+With MailHog running, to view messages that are sent by your
+application, open your browser and go to `http://127.0.0.1:8025`
 
-Email Server
-^^^^^^^^^^^^
+### Sentry
 
-In development, it is often nice to be able to see emails that are being sent from your application. For that reason local SMTP server `MailHog`_ with a web interface is available as docker container.
-
-Container mailhog will start automatically when you will run all docker containers.
-
-With MailHog running, to view messages that are sent by your application, open your browser and go to ``http://127.0.0.1:8025``
-
-.. _mailhog: https://github.com/mailhog/MailHog
-
-
-
-Sentry
-^^^^^^
-
-Sentry is an error logging aggregator service. You can sign up for a free account at  https://sentry.io/signup/?code=cookiecutter  or download and host it yourself.
-The system is setup with reasonable defaults, including 404 logging and integration with the WSGI application.
+Sentry is an error logging aggregator service. You can sign up for a
+free account at <https://sentry.io/signup/?code=cookiecutter> or
+download and host it yourself. The system is setup with reasonable
+defaults, including 404 logging and integration with the WSGI
+application.
 
 You must set the DSN url in production.
-
-
