@@ -1,0 +1,7 @@
+# PostgreSQL
+# ------------------------------------------------------------------------------
+POSTGRES_HOST=postgres
+POSTGRES_PORT=5432
+POSTGRES_DB=serpent_tracker
+POSTGRES_USER=KYISJZjWNCXDWuukFDnFsfBnAlNSvKek
+POSTGRES_PASSWORD=LsesdM8SDeAUsKG41l6A9I8EUmEwenxi0KiOFpIROVgDy1Tye89ndmBtOuJqPLL9
