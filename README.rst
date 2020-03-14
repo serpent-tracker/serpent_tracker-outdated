@@ -10,6 +10,10 @@ A Snake keeping solution for managing snake records
      :target: https://github.com/ambv/black
      :alt: Black code style
 
+.. image:: https://readthedocs.org/projects/serpent-tracker-docs/badge/?version=latest
+    :target: https://serpent-tracker-docs.readthedocs.io/en/latest/?badge=latest
+    :alt: Documentation Status
+
 
 :License: MIT
 
