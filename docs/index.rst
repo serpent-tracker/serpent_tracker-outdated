@@ -10,6 +10,10 @@ Welcome to serpent_tracker's documentation!
    :maxdepth: 2
    :caption: Contents:
 
+   developing-locally
+   developing-locally-with-docker
+   settings
+   testing
    pycharm/configuration
 
 
