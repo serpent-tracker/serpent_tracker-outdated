@@ -5,12 +5,11 @@ A Snake keeping solution for managing snake records locally or as a
 service eventually.
 
 [![Black code style](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/ambv/black)
-
 [![Documentation Status](https://readthedocs.org/projects/serpent-tracker-docs/badge/?version=latest)](https://serpent-tracker-docs.readthedocs.io/en/latest/?badge=latest)
-
 [![image](https://travis-ci.com/serpent-tracker/serpent_tracker.svg?branch=master)](https://travis-ci.com/serpent-tracker/serpent_tracker)
-
 ![Build and Test](https://github.com/serpent-tracker/serpent_tracker/workflows/Build%20and%20Test/badge.svg)
+
+[![Coverage Status](https://coveralls.io/repos/github/serpent-tracker/serpent_tracker/badge.svg?branch=master)](https://coveralls.io/github/serpent-tracker/serpent_tracker?branch=master)
 
 License
 
