@@ -1,5 +1,5 @@
 [run]
 include = serpent_tracker/*
-omit = *migrations*, *tests*
+omit = *migrations*, *tests*, *templates*, *contrib*, *utils*
 plugins =
     django_coverage_plugin
