@@ -1,7 +1,7 @@
 serpent_tracker
 ===============
 
-A Snake keeping solution for managing snake records
+A Snake keeping solution for managing snake records locally or as a service eventually.
 
 .. image:: https://img.shields.io/badge/built%20with-Cookiecutter%20Django-ff69b4.svg
      :target: https://github.com/pydanny/cookiecutter-django/
