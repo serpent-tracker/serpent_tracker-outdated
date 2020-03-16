@@ -2,9 +2,9 @@ name: Build and Test
 on:
   pull_request:
     paths-ignore:
-    - "README.md"
-    - "Makefile"
-    - "Dockerfile"
+      - "README.md"
+      - "Makefile"
+      - "Dockerfile"
   push:
     paths-ignore:
       - "README.md"
