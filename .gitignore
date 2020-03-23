@@ -53,6 +53,9 @@ coverage.xml
 # Django stuff:
 staticfiles/
 
+# Mailhog Auth
+auth.file
+
 # Sphinx documentation
 docs/_build/
 
